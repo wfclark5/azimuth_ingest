@@ -1,0 +1,7 @@
+  
+pandas
+keyring
+teradatasql
+datetime
+sqlparse
+teradata
