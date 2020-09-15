@@ -1,7 +1,9 @@
 FROM python:3.8
 
-ADD source/my_script.py 
+ADD . /source
+
+WORKDIR /source
 
 RUN pip install -r requirements.txt
 
-CMD [ "python", "./source/my_script.py" ]
+CMD [ "python", "/ingest_val.py" ]

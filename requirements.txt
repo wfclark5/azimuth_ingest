@@ -1,7 +1,4 @@
-  
 pandas
-keyring
-teradatasql
 datetime
-sqlparse
-teradata
+yahoo-earnings-calendar
+influxdb-client
