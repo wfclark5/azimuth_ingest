@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: wfclarkazimuthingestbatch 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wfclarkazimuthingestbatch
+  template:
+    metadata:
+      labels:
+        app: wfclarkazimuthingestbatch 
+    spec:
+      containers:
+        - name: wfclarkazimuthingestbatch 
+          image: azimuth.azurecr.io/wfclarkazimuthingestbatch
+          ports:
+          - containerPort: 80
