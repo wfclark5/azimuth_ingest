@@ -12,7 +12,7 @@ variables:
 
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: '51698fdc-cc61-4811-ba11-fb9950ecb741'
-  imageRepository: 'azimuthmodel'
+  imageRepository: 'azimuthingest'
   containerRegistry: 'azimuth.azurecr.io'
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
@@ -53,7 +53,7 @@ stages:
     displayName: Deploy
     pool:
       vmImage: $(vmImageName)
-    environment: 'wfclark5azimuthmodel.azimuth'
+    environment: 'wfclark5azimuthingest.azimuth'
     strategy:
       runOnce:
         deploy:
