@@ -1,9 +1,11 @@
 FROM python:3.8
 
-ADD . /source
+COPY . /working 
 
-WORKDIR /source
+RUN chmod 755 /working/source/ingest_val.py
+
+WORKDIR /working
 
 RUN pip install -r requirements.txt
 
-CMD [ "python", "/ingest_val.py" ]
+CMD [ "python", "/working/source/ingest_val.py" ]
