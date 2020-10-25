@@ -1,4 +1,10 @@
 # Deploy to Azure Kubernetes Service
+- task: KubernetesManifest@0
+  inputs:
+    action: 'deploy'
+    kubernetesServiceConnection: 'Kub-azimuth'
+    namespace: 'azimuth'
+    manifests: 'azimuth'
 # Build and push image to Azure Container Registry; Deploy to Azure Kubernetes Service
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
